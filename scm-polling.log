@@ -1,0 +1,15 @@
+Started on 18-Mar-2016 10:13:19
+Using strategy: Default
+[poll] Last Built Revision: Revision 5c1eb0b866faa45befae270b6ad79edb5ac38a80 (refs/remotes/origin/master)
+using GIT_SSH to set credentials 
+using .gitcredentials to set credentials
+ > git.exe --version # timeout=10
+ > git.exe init C:\Windows\TEMP\hudson4050174792444329785tmp # timeout=10
+ > git.exe config --local credential.username angeldalberici # timeout=10
+ > git.exe config --local credential.helper store --file=\"C:\Windows\TEMP\git1951732119155582789.credentials\" # timeout=10
+ > git.exe -c core.askpass=true ls-remote -h https://github.com/angeldalberici/mavenjenkins.git # timeout=10
+ > git.exe config --local --remove-section credential # timeout=10
+Found 1 remote heads on https://github.com/angeldalberici/mavenjenkins.git
+[poll] Latest remote head revision on refs/heads/master is: 5c1eb0b866faa45befae270b6ad79edb5ac38a80 - already built by 272
+Done. Took 0.81 sec
+No changes
