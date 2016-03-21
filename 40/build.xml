@@ -26,12 +26,11 @@
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>36</hudsonBuildNumber>
+            <hudsonBuildNumber>40</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
       <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
-      <scmName></scmName>
       <remoteUrls>
         <string>https://github.com/angeldalberici/mavenjenkins.git</string>
       </remoteUrls>
@@ -154,7 +153,7 @@
         </entry>
         <entry>
           <string>com.mycompany:mavenjenkins-1.0.0-SNAPSHOT.zip</string>
-          <string>fb12f108294acfa10dd512533d2b0b4e</string>
+          <string>26dc3e7a2ff856e422d2d43c28de148b</string>
         </entry>
         <entry>
           <string>org.apache.logging.log4j:log4j-api-2.1.jar</string>
@@ -647,11 +646,11 @@
       </record>
     </hudson.tasks.Fingerprinter_-FingerprintAction>
   </actions>
-  <queueId>54</queueId>
-  <timestamp>1458567810694</timestamp>
-  <startTime>1458567810696</startTime>
-  <result>SUCCESS</result>
-  <duration>12317</duration>
+  <queueId>58</queueId>
+  <timestamp>1458568379858</timestamp>
+  <startTime>1458568379859</startTime>
+  <result>FAILURE</result>
+  <duration>8704</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <builtOn></builtOn>
