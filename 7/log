@@ -1,0 +1,43 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0madministrator
+Building in workspace /var/lib/jenkins/jobs/Maven_Demo_LX/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/angeldalberici/mavenjenkins.git # timeout=10
+Fetching upstream changes from https://github.com/angeldalberici/mavenjenkins.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+using .gitcredentials to set credentials
+ > git config --local credential.username angeldalberici # timeout=10
+ > git config --local credential.helper store --file=/tmp/git1254847967865672782.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/angeldalberici/mavenjenkins.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 6ab0a086f894e3d3f2d1fde80ba38d5bb2f97dd1 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6ab0a086f894e3d3f2d1fde80ba38d5bb2f97dd1
+ > git rev-list 6ab0a086f894e3d3f2d1fde80ba38d5bb2f97dd1 # timeout=10
+Parsing POMs
+[workspace] $ /usr/lib/jvm/java-1.7.0-openjdk-i386/bin/java -cp /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven31-agent-1.5.jar:/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/boot/plexus-classworlds-2.5.2.jar:/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/conf/logging jenkins.maven3.agent.Maven31Main /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven /var/cache/jenkins/war/WEB-INF/lib/remoting-2.56.jar /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven31-interceptor-1.5.jar /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.5.jar 41580
+ERROR: Failed to parse POMs
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.io.IOException: Cannot run program "/usr/lib/jvm/java-1.7.0-openjdk-i386/bin/java" (in directory "/var/lib/jenkins/jobs/Maven_Demo_LX/workspace"): error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at hudson.Proc$LocalProc.<init>(Proc.java:244)
+	at hudson.Proc$LocalProc.<init>(Proc.java:216)
+	at hudson.Launcher$LocalLauncher.launch(Launcher.java:815)
+	at hudson.Launcher$ProcStarter.start(Launcher.java:381)
+	at hudson.maven.AbstractMavenProcessFactory.newProcess(AbstractMavenProcessFactory.java:266)
+	at hudson.maven.ProcessCache.get(ProcessCache.java:236)
+	at hudson.maven.MavenModuleSetBuild$MavenModuleSetBuildExecution.doRun(MavenModuleSetBuild.java:755)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:534)
+	at hudson.model.Run.execute(Run.java:1738)
+	at hudson.maven.MavenModuleSetBuild.run(MavenModuleSetBuild.java:529)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:410)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:248)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+Finished: FAILURE

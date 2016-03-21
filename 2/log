@@ -1,0 +1,4 @@
+Started by timer
+Building in workspace /var/lib/jenkins/jobs/Maven_Demo_LX/workspace
+ERROR: A Maven installation needs to be available for this project to be built.Either your server has no Maven installations defined, or the requested Maven version does not exist.
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mFinished: FAILURE

@@ -1,0 +1,21 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0madministrator
+Building in workspace /var/lib/jenkins/jobs/Maven_Demo_LX/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/angeldalberici/mavenjenkins.git # timeout=10
+Fetching upstream changes from https://github.com/angeldalberici/mavenjenkins.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+using .gitcredentials to set credentials
+ > git config --local credential.username angeldalberici # timeout=10
+ > git config --local credential.helper store --file=/tmp/git7860153509218853509.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/angeldalberici/mavenjenkins.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 6ab0a086f894e3d3f2d1fde80ba38d5bb2f97dd1 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6ab0a086f894e3d3f2d1fde80ba38d5bb2f97dd1
+ > git rev-list 6ab0a086f894e3d3f2d1fde80ba38d5bb2f97dd1 # timeout=10
+ERROR: Maven Home /usr/local/maven doesn’t exist
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mFinished: FAILURE
