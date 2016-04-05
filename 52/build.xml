@@ -4,7 +4,9 @@
     <hudson.model.CauseAction>
       <causeBag class="linked-hash-map">
         <entry>
-          <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
           <int>1</int>
         </entry>
       </causeBag>
@@ -24,11 +26,12 @@
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>43</hudsonBuildNumber>
+            <hudsonBuildNumber>52</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
       <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
       <remoteUrls>
         <string>https://github.com/angeldalberici/mavenjenkins.git</string>
       </remoteUrls>
@@ -151,7 +154,7 @@
         </entry>
         <entry>
           <string>com.mycompany:mavenjenkins-1.0.0-SNAPSHOT.zip</string>
-          <string>f5d0e9ec1ec1ddc4e62d0564e75d139b</string>
+          <string>39d5cfd91b3f199a3455a6c32273eb93</string>
         </entry>
         <entry>
           <string>org.apache.logging.log4j:log4j-api-2.1.jar</string>
@@ -644,11 +647,11 @@
       </record>
     </hudson.tasks.Fingerprinter_-FingerprintAction>
   </actions>
-  <queueId>65</queueId>
-  <timestamp>1458576840575</timestamp>
-  <startTime>1458576840595</startTime>
+  <queueId>83</queueId>
+  <timestamp>1458583092660</timestamp>
+  <startTime>1458583092675</startTime>
   <result>SUCCESS</result>
-  <duration>24342</duration>
+  <duration>15629</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <builtOn></builtOn>

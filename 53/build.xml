@@ -24,7 +24,7 @@
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>43</hudsonBuildNumber>
+            <hudsonBuildNumber>53</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
@@ -151,7 +151,7 @@
         </entry>
         <entry>
           <string>com.mycompany:mavenjenkins-1.0.0-SNAPSHOT.zip</string>
-          <string>f5d0e9ec1ec1ddc4e62d0564e75d139b</string>
+          <string>d191f07dae7e2d7d1c9a34d827529848</string>
         </entry>
         <entry>
           <string>org.apache.logging.log4j:log4j-api-2.1.jar</string>
@@ -644,11 +644,11 @@
       </record>
     </hudson.tasks.Fingerprinter_-FingerprintAction>
   </actions>
-  <queueId>65</queueId>
-  <timestamp>1458576840575</timestamp>
-  <startTime>1458576840595</startTime>
-  <result>SUCCESS</result>
-  <duration>24342</duration>
+  <queueId>86</queueId>
+  <timestamp>1458638100026</timestamp>
+  <startTime>1458638100044</startTime>
+  <result>FAILURE</result>
+  <duration>20224</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <builtOn></builtOn>
