@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenModuleSetBuild plugin="maven-plugin@2.12.1">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.BuildData plugin="git@2.4.2">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.19.6">
+              <sha1>6ab0a086f894e3d3f2d1fde80ba38d5bb2f97dd1</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>57</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/angeldalberici/mavenjenkins.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@2.4.2">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/lib/jenkins/jobs/Maven_Demo_LX/workspace</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <hudson.maven.MavenProbeAction>
+      <owner class="hudson.maven.MavenModuleSet">
+        <actions/>
+        <description></description>
+        <keepDependencies>false</keepDependencies>
+        <properties>
+          <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.18.1">
+            <projectUrl>https://github.com/angeldalberici/mavenjenkins/</projectUrl>
+            <displayName></displayName>
+          </com.coravy.hudson.plugins.github.GithubProjectProperty>
+        </properties>
+        <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.2">
+          <configVersion>2</configVersion>
+          <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+              <url>https://github.com/angeldalberici/mavenjenkins.git</url>
+              <credentialsId>7f324e6e-f7e2-41ca-a94a-c10135ba51ab</credentialsId>
+            </hudson.plugins.git.UserRemoteConfig>
+          </userRemoteConfigs>
+          <branches>
+            <hudson.plugins.git.BranchSpec>
+              <name>*/master</name>
+            </hudson.plugins.git.BranchSpec>
+          </branches>
+          <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+          <submoduleCfg class="list"/>
+          <extensions/>
+        </scm>
+        <canRoam>true</canRoam>
+        <disabled>false</disabled>
+        <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+        <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+        <triggers>
+          <hudson.triggers.TimerTrigger>
+            <spec># every fifteen minutes (perhaps at :07, :22, :37, :52)
+H/60 * * * *</spec>
+          </hudson.triggers.TimerTrigger>
+        </triggers>
+        <concurrentBuild>false</concurrentBuild>
+        <rootModule>
+          <groupId>com.mycompany</groupId>
+          <artifactId>mavenjenkins</artifactId>
+        </rootModule>
+        <aggregatorStyleBuild>true</aggregatorStyleBuild>
+        <incrementalBuild>false</incrementalBuild>
+        <ignoreUpstremChanges>false</ignoreUpstremChanges>
+        <archivingDisabled>false</archivingDisabled>
+        <siteArchivingDisabled>false</siteArchivingDisabled>
+        <fingerprintingDisabled>false</fingerprintingDisabled>
+        <resolveDependencies>false</resolveDependencies>
+        <processPlugins>false</processPlugins>
+        <mavenValidationLevel>-1</mavenValidationLevel>
+        <runHeadless>false</runHeadless>
+        <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+        <blockTriggerWhenBuilding>true</blockTriggerWhenBuilding>
+        <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+        <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+        <reporters/>
+        <publishers>
+          <hudson.maven.RedeployPublisher>
+            <id>testing</id>
+            <url>http://localhost:8888/repository/testing</url>
+            <uniqueVersion>true</uniqueVersion>
+            <evenIfUnstable>false</evenIfUnstable>
+          </hudson.maven.RedeployPublisher>
+        </publishers>
+        <buildWrappers>
+          <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.16">
+            <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
+              <timeoutMinutes>10</timeoutMinutes>
+            </strategy>
+            <operationList/>
+          </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+        </buildWrappers>
+        <prebuilders/>
+        <postbuilders>
+          <hudson.tasks.Shell>
+            <command>echo &quot;-----------------------------------------------------------&quot;
+pwd
+whoami
+cd ~/jobs/Maven_Demo_LX/builds
+git add .
+git commit -m &quot;Auto commit&quot;
+git push origin master
+
+</command>
+          </hudson.tasks.Shell>
+        </postbuilders>
+        <runPostStepsIfResult>FAILURE</runPostStepsIfResult>
+      </owner>
+    </hudson.maven.MavenProbeAction>
+    <hudson.maven.reporters.MavenAggregatedArtifactRecord>
+      <records/>
+      <parent reference="../../.."/>
+    </hudson.maven.reporters.MavenAggregatedArtifactRecord>
+  </actions>
+  <queueId>90</queueId>
+  <timestamp>1459860979607</timestamp>
+  <startTime>1459860979610</startTime>
+  <duration>0</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/jobs/Maven_Demo_LX/workspace</workspace>
+  <hudsonVersion>2.0-alpha-4</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@2.4.2">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <mavenVersionUsed>3.3.3</mavenVersionUsed>
+</hudson.maven.MavenModuleSetBuild>
